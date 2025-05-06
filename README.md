@@ -3,7 +3,7 @@
 ---
 
 ## Project Overview
-This project delivers a fully automated deep-learning pipeline that converts high-resolution aerial orthophotos into clean, topologically correct road centerline graphs—ready for GPS navigation, urban planning, or GIS updates. Building on the Deep ResUNet + B-snake approach of Munawar et al. (2023), we implement three successive segmentation models and smooth their outputs with a cubic active-contour (B-snake) post-processing step :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}.
+This project delivers a fully automated deep-learning pipeline that converts high-resolution aerial orthophotos into clean, topologically correct road centerline graphs—ready for GPS navigation, urban planning, or GIS updates. Building on the Deep ResUNet + B-snake approach of Munawar et al. (2023), we implement three successive segmentation models and smooth their outputs with a cubic active-contour (B-snake) post-processing step 
 
 ---
 
@@ -11,13 +11,13 @@ This project delivers a fully automated deep-learning pipeline that converts hig
 - **Baseline (Deliverable 3)**: Deep ResUNet with residual blocks and boundary-aware loss scheduling  
 - **Deliverable 4**: Addition of CBAM attention modules and a lightweight ASPP context block  
 - **Deliverable 5**: Nested U-Net++ with Attention Gates, deep supervision, and Focal Tversky + CosineAnnealingLR  
-- **Post-Processing**: Cubic B-spline active-contour (“B-snake”) smoothing for topologically consistent centerlines :contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}  
+- **Post-Processing**: Cubic B-spline active-contour (“B-snake”) smoothing for topologically consistent centerlines
 
 ---
 
 ## Dataset & Preprocessing
-- **Source**: Massachusetts Roads benchmark (1 500×1 500 RGB orthophotos with binary road masks)  
-- **Tiling**: Each image → 3×3 grid of 512×512 patches → ~7 240 tiles  
+- **Source**: Massachusetts Roads benchmark (1500×1500 RGB orthophotos with binary road masks)  
+- **Tiling**: Each image → 3×3 grid of 512×512 patches → ~7240 tiles  
 - **Quick-split**: 1 000 tiles for training, 200 for validation (rapid prototyping)  
 - **Filtering**: Discard tiles with < 1 % road coverage  
 - **Augmentations**: Random flips, rotations, brightness/contrast adjustments, Gaussian blur  
@@ -46,7 +46,7 @@ This project delivers a fully automated deep-learning pipeline that converts hig
 ### 4. Post-Processing: B-snake Active Contours  
 - Initialize cubic B-spline control points every 64 connected pixels  
 - Iteratively minimize perpendicular distance to the true road edge  
-- Outputs smooth, topologically consistent polylines :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}  
+- Outputs smooth, topologically consistent polylines 
 
 ---
 
