@@ -27,7 +27,7 @@ This project delivers a fully automated deep-learning pipeline that converts hig
 ## Methodology
 
 ### 1. Baseline (Deliverable 3: Deep ResUNet + Boundary-aware Loss)  
-- 7-level encoder–decoder built from residual units (3×3 Conv + BN + ReLU with identity skips)  
+- 5-level encoder–decoder built from residual units (3×3 Conv + BN + ReLU with identity skips)  
 - Strided convolutions replace pooling for downsampling  
 - Loss schedule: epochs 1–10 → Boundary + Weighted BCE + Dice; epochs 11+ → Weighted BCE + Dice  
 
